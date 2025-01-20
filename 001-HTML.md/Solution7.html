@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAN Card Design</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f1f1f1;
+        height: 100vh;
+      }
+
+      .pan-card {
+        width: 500px;
+        height: 300px;
+        background: linear-gradient(135deg, #cce7ff, #b3d4ff, #99c2ff, #80b0ff);
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .header {
+        text-align: center;
+        color: #000080;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header h1 {
+        font-size: 14px;
+        margin: 2px;
+      }
+
+      .signature-section img {
+        margin-top: 15pxpx;
+        padding: 0px;
+      }
+
+      .photo-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 20px;
+      }
+
+      .details {
+        width: 65%;
+        color: #000;
+        font-size: 14px;
+      }
+
+      .details .pan-number {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 5px;
+      }
+
+      .middle-part img {
+        width: 35px;
+        height: 50px;
+      }
+
+      .name-section {
+        line-height: 2.5;
+      }
+
+      .photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        gap: 30px;
+        color: #555;
+      }
+      .photo img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .bar-code {
+        width: 70px;
+        height: 70px;
+        background-color: #c0c0c0;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .pan-number-section p {
+        margin: 0px;
+        margin-block-start: 0px;
+        margin-block-end: 30px;
+      }
+
+      .pan {
+        margin: 0px;
+      }
+
+      .number {
+        margin-top: 0px;
+      }
+
+      .text {
+        font-weight: bold;
+      }
+
+      #sign {
+        width: 70px;
+        height: 30px;
+      }
+
+      .blue-text {
+        color: #000080;
+        font-weight: bold;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pan-card">
+      <!-- header section -->
+      <div class="header">
+        <div class="first-part">
+          <h1>आयकर विभाग</h1>
+          <h1>INCOME TAX DEPARTMENT</h1>
+        </div>
+        <div class="middle-part">
+          <img src="./images/Emblem_of_India.png" alt="emblem" />
+        </div>
+        <div class="end-part">
+          <h1>भारत सरकार</h1>
+          <h1>GOVT. OF INDIA</h1>
+        </div>
+      </div>
+      <!-- main content of pan card -->
+      <div class="photo-section">
+        <!-- left content -->
+        <div class="details">
+          <div class="name-section">
+            <p class="text">D MANIKANDAN</p>
+            <p class="text">DURAISAMY</p>
+          </div>
+          <div id="pan-number-section">
+            <p class="pan text">16/07/1986</p>
+            <p class="pan blue-text">Permanent Account Number</p>
+            <p class="text number">BNZPM2501F</p>
+          </div>
+          <div class="signature-section">
+            <img src="./images/sign1.png" id="sign" alt="signature" />
+            <p class="blue-text">Signature</p>
+          </div>
+        </div>
+        <!-- right content -->
+        <div class="photo">
+          <div class="bar-code"></div>
+          <img src="./images/women image.jpg" alt="photo" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

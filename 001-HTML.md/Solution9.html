@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .input-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        width: 300px;
+      }
+
+      label {
+        font-size: 14px;
+        margin-bottom: 4px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 6px;
+        font-size: 14px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        width: auto;
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Form Elements</h2>
+    <form>
+      <!-- Text Input -->
+      <div class="input-section">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="tharunika" />
+      </div>
+
+      <!-- Email Input -->
+      <div class="input-section">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value="tharunika@gmail.com"
+        />
+      </div>
+
+      <!-- Telephone Input -->
+      <div class="input-section">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" value="+1234567890" />
+      </div>
+
+      <!-- Password Input -->
+      <div class="input-section">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          value="defaultPassword"
+        />
+      </div>
+
+      <!-- Date Input -->
+      <div class="input-section">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" value="2000-01-01" />
+      </div>
+
+      <!-- Checkbox -->
+      <div class="input-section">
+        <label for="subscribe">Subscribe:</label>
+        <input type="checkbox" id="subscribe" name="subscribe" checked />
+      </div>
+
+      <!-- Radio Buttons -->
+      <div class="input-section">
+        <p>Gender:</p>
+        <label for="male">Male:</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="female">Female:</label>
+        <input type="radio" id="female" name="gender" value="female" checked />
+      </div>
+
+      <!-- Dropdown -->
+      <div class="input-section">
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="usa" selected>India</option>
+          <option value="canada">France</option>
+          <option value="uk">South Korea</option>
+        </select>
+      </div>
+
+      <!-- Textarea -->
+      <div class="input-section">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="30">
+          This is a default message.</textarea
+        >
+      </div>
+
+      <!-- File Input -->
+      <div class="input-section">
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file" />
+      </div>
+
+      <!-- Submit Button -->
+      <div class="input-section"><input type="submit" value="submit" /></div>
+    </form>
+  </body>
+</html>

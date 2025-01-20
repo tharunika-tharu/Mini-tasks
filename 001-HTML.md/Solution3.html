@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us Form</title>
+    <style>
+      body {
+        padding: 0px;
+        margin: 0px;
+        width: auto;
+        background-color: antiquewhite;
+      }
+      .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .contact-form {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 30em;
+        height: 25px;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+      }
+      .contact-form button {
+        background-color: #000;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 12px;
+        cursor: pointer;
+        text-align: center;
+      }
+      .contact-form textarea {
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- simple contact form -->
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <form class="contact-form">
+        <!-- name, email and phone number input -->
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <input
+          type="tel"
+          placeholder="(+91)-XXXXXXXXXX"
+          pattern="^\+91\-\d{10}$"
+          required
+        />
+        <textarea placeholder="Message" required></textarea>
+        <button>Send Message</button>
+      </form>
+    </div>
+  </body>
+</html>

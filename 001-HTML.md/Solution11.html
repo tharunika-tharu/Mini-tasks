@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Input Elements Example</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .input-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        width: 300px;
+      }
+
+      label {
+        font-size: 14px;
+        margin-bottom: 4px;
+        font-weight: bold;
+      }
+
+      input {
+        width: 100%;
+        padding: 6px;
+        font-size: 14px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        width: auto;
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Input Elements</h1>
+
+    <form>
+      <!-- text input -->
+      <div class="input-section">
+        <label for="text">Text:</label>
+        <input type="text" id="text" name="text" />
+      </div>
+
+      <!-- password input -->
+      <div class="input-section">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+      </div>
+
+      <!-- Phone number input -->
+      <div class="input-section">
+        <label for="phonenumber">Phone number:</label>
+        <input type="tel" name="phonenumber" />
+      </div>
+
+      <!-- email input -->
+      <div class="input-section">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+      </div>
+
+      <!-- number input -->
+      <div class="input-section">
+        <label for="number">Number:</label>
+        <input type="number" id="number" name="number" />
+      </div>
+
+      <!-- data input -->
+      <div class="input-section">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" />
+      </div>
+
+      <!-- month input -->
+      <div class="input-section">
+        <label for="month">Month:</label>
+        <input type="month" name="month" />
+      </div>
+
+      <!-- search input -->
+      <div class="input-section">
+        <label for="week">week:</label>
+        <input type="week" name="week" />
+      </div>
+
+      <!-- time input -->
+      <div class="input-section">
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" />
+      </div>
+
+      <!-- color input -->
+      <div class="input-section">
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color" />
+      </div>
+
+      <!-- file input -->
+      <div class="input-section">
+        <label for="file">File:</label>
+        <input type="file" id="file" name="file" />
+      </div>
+
+      <!-- range input -->
+      <div class="input-section">
+        <label for="range">Range:</label>
+        <input type="range" id="range" name="range" min="0" max="100" />
+      </div>
+
+      <!-- checkbox input -->
+      <div class="input-section">
+        <label for="checkbox">Checkbox:</label>
+        <input type="checkbox" id="checkbox" name="checkbox" />
+      </div>
+
+      <!-- Radio input -->
+      <div class="input-section">
+        <label for="radio1">Radio 1:</label>
+        <input type="radio" id="radio1" name="radio" value="option1" />
+
+        <label for="radio2">Radio 2:</label>
+        <input type="radio" id="radio2" name="radio" value="option2" />
+      </div>
+
+      <!-- submit input -->
+      <div class="input-section">
+        <label for="submit">Submit:</label>
+        <input type="submit" value="Submit" />
+      </div>
+
+      <!-- Reset input -->
+      <div class="input-section">
+        <label for="reset">Reset:</label>
+        <input type="reset" value="reset" />
+      </div>
+    </form>
+  </body>
+</html>
