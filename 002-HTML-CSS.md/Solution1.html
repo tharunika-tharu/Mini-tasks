@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Equation</title>
+    <style>
+      .content-wrap {
+        font-family: "Times New Roman", serif;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+      }
+
+      .fraction {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .fraction .numerator,
+      .fraction .denominator {
+        text-align: center;
+      }
+
+      .fraction .line {
+        border-top: 1px solid black;
+        width: 100%;
+      }
+
+      .superscript {
+        font-size: 0.7em;
+        vertical-align: super;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content-wrap">
+      <h3>Equation</h3>
+      <div class="equation">
+        <div class="fraction">
+          <span class="numerator">∂<sup>2</sup>u</span>
+          <span class="line"></span>
+          <span class="denominator">∂t<sup>2</sup></span>
+        </div>
+        <span style="margin: 0 10px">=</span>
+        <span>c<sup>2</sup></span>
+        <div class="fraction" style="margin-left: 10px">
+          <span class="numerator">∂<sup>2</sup>u</span>
+          <span class="line"></span>
+          <span class="denominator">∂x<sup>2</sup></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

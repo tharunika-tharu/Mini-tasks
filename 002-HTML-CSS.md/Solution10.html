@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Cap Design</title>
+    <style>
+      body {
+        font-family: "Georgia", serif;
+        line-height: 1.6;
+        margin: 40px;
+        background-color: #f5f5f5;
+      }
+
+      .drop-cap-text {
+        width: 300px;
+        margin: 0 auto;
+        text-align: justify;
+        background-color: #eaf2f8;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .drop-cap-text p {
+        margin: 0;
+      }
+
+      .drop-cap-text p:first-of-type::first-letter {
+        float: left;
+        font-size: 6em;
+        font-weight: bold;
+        line-height: 0.5;
+        margin-right: 0px;
+        margin-top: 15px;
+        color: #000;
+        font-family: "Georgia", serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="drop-cap-text">
+      <p>
+        Drop caps can be used to add emphasis to blocks of text but know they
+        can affect readability.
+      </p>
+    </div>
+  </body>
+</html>

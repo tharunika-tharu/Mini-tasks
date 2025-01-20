@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Center Box</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        transition: transform 0.3s ease;
+      }
+
+      .box:hover {
+        transform: translate(50px, 50px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Move Me</div>
+  </body>
+</html>
