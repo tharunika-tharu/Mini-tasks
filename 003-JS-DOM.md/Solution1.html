@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Effect with JavaScript</title>
+    <style>
+      h1 {
+        font-weight: 400;
+      }
+      .hover-div,
+      .hover-span {
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 15px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hover the bellow text</h1>
+      <div class="hover-div">Div Tag!</div>
+      <span class="hover-span">Span Tag!</span>
+    </div>
+
+    <script>
+      //function to generate a random color
+      const getRandomColor = () => {
+        const letters = "0123456789ABCDEF";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      };
+
+      // Add event listeners to the div and span
+      const hoverDiv = document.querySelector(".hover-div");
+      const hoverSpan = document.querySelector(".hover-span");
+
+      const changeColor = (event) => {
+        event.target.style.color = getRandomColor();
+      };
+
+      //function to reset to default color
+      const resetColor = (event) => {
+        event.target.style.color = "";
+      };
+
+      hoverDiv.addEventListener("mouseover", changeColor);
+      hoverDiv.addEventListener("mouseout", resetColor);
+
+      hoverSpan.addEventListener("mouseover", changeColor);
+      hoverSpan.addEventListener("mouseout", resetColor);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Key Press Event</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Press any key on this page</h1>
+
+    <script>
+      //add an event listener for keydown events
+      document.addEventListener("keydown", function (event) {
+        //check if the pressed key is the spacebar
+        if (event.code === "Space") {
+          alert("Thank You..!!");
+          //close the current window
+          window.close();
+        } else {
+          //for all other keys, show an invalid key alert
+          alert("Invalid Key Pressed");
+        }
+      });
+    </script>
+  </body>
+</html>

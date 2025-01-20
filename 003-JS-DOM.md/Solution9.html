@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .editable {
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+
+      .editable:hover {
+        border: 1px solid #007bff;
+        cursor: text;
+      }
+
+      .editable.editing {
+        border: 1px solid #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="editable" id="myParagraph">This paragraph is editable</p>
+
+    <script>
+      const paragraph = document.getElementById("myParagraph");
+      let isEditing = false;
+      let originalText = paragraph.textContent;
+
+      paragraph.addEventListener("mouseover", () => {
+        paragraph.classList.add("editable");
+      });
+
+      paragraph.addEventListener("mouseout", () => {
+        paragraph.classList.remove("editable");
+        if (isEditing) {
+          saveChanges();
+        }
+      });
+
+      paragraph.addEventListener("mousedown", () => {
+        if (!isEditing) {
+          isEditing = true;
+          paragraph.classList.add("editing");
+          paragraph.contentEditable = true;
+          paragraph.focus();
+        }
+      });
+
+      function saveChanges() {
+        isEditing = false;
+        paragraph.classList.remove("editing");
+        paragraph.contentEditable = false;
+        originalText = paragraph.textContent;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Character Counter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #e8f0fe;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        margin-top: 100px;
+      }
+
+      h1 {
+        color: #1d9bf0;
+      }
+
+      textarea {
+        width: 80%;
+        height: 100px;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #1d9bf0;
+        border-radius: 10px;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      textarea:focus {
+        border-color: #0a74da;
+      }
+
+      p {
+        margin-top: 10px;
+        color: #1d9bf0;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Twitter Inspired Character Counter</h1>
+      <textarea id="text-input" placeholder="What's happening?"></textarea>
+      <p id="message">Start typing to see character count in the console!</p>
+    </div>
+    <script>
+      //select the textarea element
+      const textarea = document.getElementById("text-input");
+
+      //add an event listener for the "input" event
+      textarea.addEventListener("input", () => {
+        // Get the character count
+        const charCount = textarea.value.length;
+        console.log(`Character count: ${charCount}`);
+      });
+    </script>
+  </body>
+</html>

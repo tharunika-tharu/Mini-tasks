@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Input in Span</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      span {
+        color: blue;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter a Value</h1>
+    <button onclick="getUserInput()">Click to Enter Value</button>
+    <p>The value you entered is: <span id="output">No value entered</span></p>
+
+    <script>
+      function getUserInput() {
+        //prompt user for input
+        const userInput = prompt("Please enter a value:");
+
+        // Check if input is not null or empty
+        if (userInput !== null && userInput.trim() !== "") {
+          //display the value in the span
+          document.getElementById("output").textContent = userInput;
+        } else {
+          //handle empty input
+          document.getElementById("output").textContent = "[No value entered]";
+        }
+      }
+    </script>
+  </body>
+</html>

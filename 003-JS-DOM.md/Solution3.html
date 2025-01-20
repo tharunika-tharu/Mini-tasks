@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Coordinates</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 50px;
+        text-align: center;
+      }
+
+      h1 {
+        cursor: pointer;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        display: inline-block;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+
+      span {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 onclick="displayCoordinates(event)">
+      Click Here
+      <p>This is a paragraph inside the H1 tag.</p>
+    </h1>
+    <p>Mouse X Coordinate: <span id="x-coordinate">0</span></p>
+    <p>Mouse Y Coordinate: <span id="y-coordinate">0</span></p>
+
+    <script>
+      function displayCoordinates(event) {
+        //get the X and Y coordinates of the mouse
+        const x = event.clientX;
+        const y = event.clientY;
+
+        //display the coordinates in the span elements
+        document.getElementById("x-coordinate").textContent = x;
+        document.getElementById("y-coordinate").textContent = y;
+      }
+    </script>
+  </body>
+</html>

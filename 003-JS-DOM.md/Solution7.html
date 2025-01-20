@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Screen Mode</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+      }
+
+      #enter-fullscreen {
+        background-color: #28a745;
+      }
+
+      #exit-fullscreen {
+        background-color: #dc3545;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Full-Screen Mode Example</h1>
+    <button id="enter-fullscreen" onclick="enterFullScreen()">
+      Enter Full Screen
+    </button>
+    <button id="exit-fullscreen" onclick="exitFullScreen()">
+      Exit Full Screen
+    </button>
+
+    <script>
+      function enterFullScreen() {
+        //request full-screen mode
+        const element = document.documentElement;
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          //for firefox
+          element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+          //for chrome, safari and  Opera
+          element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+          //for IE/edge
+          element.msRequestFullscreen();
+        }
+      }
+
+      function exitFullScreen() {
+        //exit full-screen mode
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+          //for firefox
+          document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+          //for chrome, safari and opera
+          document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+          //for IE/ddge
+          document.msExitFullscreen();
+        }
+      }
+    </script>
+  </body>
+</html>

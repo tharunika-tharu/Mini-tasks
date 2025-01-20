@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decimal Converter</title>
+  </head>
+  <body>
+    <h1>Decimal to Binary and Hexadecimal Converter</h1>
+    <label for="decimal">Enter a Decimal Number:</label>
+    <input type="number" id="decimal" placeholder="Enter a number" />
+    <button id="convert">Convert</button>
+
+    <h2>Results:</h2>
+    <p>Binary: <span id="binary-result">-</span></p>
+    <p>Hexadecimal: <span id="hexadecimal-result">-</span></p>
+
+    <script>
+      //function to convert decimal to binary
+      const decimalToBinary = (number) => {
+        return number.toString(2);
+      };
+
+      //function to convert decimal to hexadecimal
+      const decimalToHexadecimal = (number) => {
+        return number.toString(16).toUpperCase();
+      };
+
+      //handle button click
+      document.getElementById("convert").addEventListener("click", () => {
+        const decimalInput = document.getElementById("decimal").value;
+
+        //validate input
+        if (decimalInput === "" || isNaN(decimalInput)) {
+          alert("Please enter a valid decimal number.");
+          return;
+        }
+
+        const decimalNumber = parseInt(decimalInput, 10);
+
+        //display results
+        document.getElementById("binary-result").textContent =
+          decimalToBinary(decimalNumber);
+        document.getElementById("hexadecimal-result").textContent =
+          decimalToHexadecimal(decimalNumber);
+      });
+    </script>
+  </body>
+</html>
